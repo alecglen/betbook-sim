@@ -27,6 +27,7 @@ class Player:
     risk_preference: float = normfield(.1, .2, .01)
     activeness: float = normfield(.4, .3)
     bets_made: int = field(default=0, init=False)
+    revenue: float = field(default=0, init=False)
     
     def takes(self, bet: Offering):
         return (

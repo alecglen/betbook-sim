@@ -22,7 +22,9 @@ def sim(game: Game):
                 player.bets_made += 1
                 wager = player.balance * player.risk_preference
                 if bet.outcome:
-                    player.balance += wager * bet.payout_multiplier
+                    winnings = wager * bet.payout_multiplier
+                    player.revenue += winnings
+                    player.balance += winnings
                 else:
                     player.balance -= wager
             else:
