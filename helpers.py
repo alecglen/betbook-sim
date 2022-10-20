@@ -30,6 +30,7 @@ def sim(game: Game):
             else:
                 player.balance -= game.burn
             player.balance = max(player.balance, game.minBalance)
+    return game
                 
                 
 def summarize(game: Game, iteration: int):
